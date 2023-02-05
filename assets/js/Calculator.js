@@ -4,12 +4,12 @@ class Calculator {
     _weight = 0;
 
     // Get height
-    static get getHeight() {
+    get height() {
         return this._height;
     }
 
     // Get weight
-    static get getWeight() {
+    get weight() {
         return this._weight;
     }
 
@@ -18,7 +18,7 @@ class Calculator {
      * 
      * @param {number} value
      */
-    static set setHeight(value) {
+    set height(value) {
 
         value = parseFloat(value);
         
@@ -38,7 +38,7 @@ class Calculator {
      * 
      * @param {number} value
      */
-    static set setWeight(value) {
+    set weight(value) {
 
         value = parseFloat(value);
 
