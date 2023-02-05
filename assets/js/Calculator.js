@@ -19,7 +19,7 @@ class Calculator {
     set height(value) {
 
         value = parseFloat(value);
-
+console.log(value);
         if (value === 0) {
             throw 'Enter an height value';
         }
