@@ -12,12 +12,13 @@ import { Calculator as CalculatorClass } from './Calculator.js';
 
         const form = document.getElementById('imc-calculator-form');;
         const formData = new FormData(form);
-        
-        console.log(formData.get('imc-calculator-height'));
 
         const Calculator = new CalculatorClass();
       
-        // Calculator.setHeight(formData.getAll('imc-calculator-height'));
+        Calculator.height(formData.get('imc-calculator-height'));
+        Calculator.weight(formData.get('imc-calculator-weight'));
+
+        console.log(Calculator.calc());
 
     });
 
