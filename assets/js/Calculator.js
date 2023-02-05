@@ -1,18 +1,18 @@
 class Calculator {
 
     constructor() {
-        this.height = 0;
-        this.weight = 0;
+        this._height = 0;
+        this._weight = 0;
     }
 
     // Get height
     static get getHeight() {
-      return this.height;
+      return this._height;
     }
 
     // Get weight
     static get getWeight() {
-      return this.weight;
+      return this._weight;
     }
 
     /**
@@ -30,7 +30,7 @@ class Calculator {
         }
         */
 
-        this.height = value;
+        this._height = value;
     }
 
     /**
@@ -48,12 +48,12 @@ class Calculator {
         }
         */
         
-        this.weight = value;
+        this._weight = value;
     }
 
     // Method
     calc() {        
-        return this.weight / this.height ** 2;
+        return this._weight / this._height ** 2;
     }
 }
 
