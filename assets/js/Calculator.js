@@ -18,21 +18,25 @@ class Calculator {
     // Set height
     set height(value) {
 
+        value = parseFloat(value);
+
         if (value === 0) {
             throw 'Enter an height value';
         }
 
-        this.height = parseFloat(value);
+        this.height = value;
     }
 
     // Set weight
     set weight(value) {
 
+        value = parseFloat(value);
+
         if (value === 0) {
             throw 'Enter an weight value';
         }
         
-        this.weight = parseFloat(value);
+        this.weight = value;
     }
 
     // Method
