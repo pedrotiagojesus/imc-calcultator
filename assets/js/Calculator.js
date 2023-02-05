@@ -15,7 +15,11 @@ class Calculator {
       return this.weight;
     }
 
-    // Set height
+    /**
+     * Set height
+     * 
+     * @param {number} value
+     */
     static set setHeight(value) {
 
         value = parseFloat(value);
@@ -29,7 +33,11 @@ class Calculator {
         this.height = value;
     }
 
-    // Set weight
+    /**
+     * Set weight
+     * 
+     * @param {number} value
+     */
     static set setWeight(value) {
 
         value = parseFloat(value);
@@ -49,4 +57,4 @@ class Calculator {
     }
 }
 
-export {Calculator}
+export {Calculator};
