@@ -1,4 +1,4 @@
-import { CalculatorClass } from './Calculator.js';
+import { Calculator as CalculatorClass } from './Calculator.js';
 
 (function () {
 
