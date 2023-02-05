@@ -18,8 +18,6 @@ class Calculator {
     // Set height
     set height(value) {
 
-        value = value.trim();
-
         if (value === 0) {
             throw 'Enter an height value';
         }
@@ -29,8 +27,6 @@ class Calculator {
 
     // Set weight
     set weight(value) {
-
-        value = value.trim();
 
         if (value === 0) {
             throw 'Enter an weight value';
