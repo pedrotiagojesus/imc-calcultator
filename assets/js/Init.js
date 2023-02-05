@@ -12,7 +12,8 @@ import { Calculator } from './Calculator.js';
 
         const form = document.getElementById('imc-calculator-form');;
         const formData = new FormData(form);
-        console.log(formData);
+        
+        console.log(formData.getAll());
     });
 
 }());
