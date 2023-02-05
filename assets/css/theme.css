@@ -10,8 +10,3 @@ main {
 #section-calculator {
     height: 100%;
 }
-
-.calculator-wrapper {
-    padding: 2rem 3rem;
-    border: 1px solid black;
-}
