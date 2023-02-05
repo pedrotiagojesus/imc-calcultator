@@ -1,12 +1,16 @@
 import { Calculator } from './Calculator.js';
 
-var button = document.querySelector('form button[type="submit"]');
+(function () {
 
-console.log(button)
+    var button = document.querySelector('form button[type="submit"]');
 
-button.addEventListener("click", function(event) {
+    console.log(button)
 
-    event.preventDefault();
+    button.addEventListener("click", function(event) {
 
-    console.log(this);
-});
+        event.preventDefault();
+
+        console.log(this);
+    });
+    
+}());
