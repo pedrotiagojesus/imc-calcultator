@@ -1,18 +1,18 @@
 class Calculator {
 
     constructor() {
-        this.height = 0;
-        this.weight = 0;
+        this.heightVal = 0;
+        this.weightVal = 0;
     }
 
     // Get height
     get height() {
-      return this.height;
+      return this.heightVal;
     }
 
     // Get weight
     get weight() {
-      return this.weight;
+      return this.weightVal;
     }
 
     // Set height
@@ -26,7 +26,7 @@ class Calculator {
         }
         */
 
-        this.height = value;
+        this.heightVal = value;
     }
 
     // Set weight
@@ -40,12 +40,12 @@ class Calculator {
         }
         */
         
-        this.weight = value;
+        this.weightVal = value;
     }
 
     // Method
     calc() {        
-        return this.weight / this.height ** 2;
+        return this.weightVal / this.heightVal ** 2;
     }
 }
 
