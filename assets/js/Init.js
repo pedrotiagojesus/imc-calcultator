@@ -1,4 +1,4 @@
-import { Calculator } from './Calculator.js';
+import { CalculatorClass } from './Calculator.js';
 
 (function () {
 
@@ -13,7 +13,12 @@ import { Calculator } from './Calculator.js';
         const form = document.getElementById('imc-calculator-form');;
         const formData = new FormData(form);
         
-        console.log(formData.getAll());
+        console.log(formData.getAll('imc-calculator-height'));
+
+        const Calculator = new CalculatorClass();
+      
+        // Calculator.setHeight(formData.getAll('imc-calculator-height'));
+
     });
 
 }());
