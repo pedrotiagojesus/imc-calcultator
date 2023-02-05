@@ -1,22 +1,22 @@
 class Calculator {
 
     constructor() {
-        this.heightVal = 0;
-        this.weightVal = 0;
+        this.height = 0;
+        this.weight = 0;
     }
 
     // Get height
-    get height() {
-      return this.heightVal;
+    static get height() {
+      return this.height;
     }
 
     // Get weight
-    get weight() {
-      return this.weightVal;
+    static get weight() {
+      return this.weight;
     }
 
     // Set height
-    set height(value) {
+    static set height(value) {
 
         value = parseFloat(value);
         
@@ -26,11 +26,11 @@ class Calculator {
         }
         */
 
-        this.heightVal = value;
+        this.height = value;
     }
 
     // Set weight
-    set weight(value) {
+    static set weight(value) {
 
         value = parseFloat(value);
 
@@ -40,12 +40,12 @@ class Calculator {
         }
         */
         
-        this.weightVal = value;
+        this.weight = value;
     }
 
     // Method
     calc() {        
-        return this.weightVal / this.heightVal ** 2;
+        return this.weight / this.height ** 2;
     }
 }
 
