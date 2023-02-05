@@ -12,7 +12,7 @@ import { Calculator as CalculatorClass } from './Calculator.js';
         const formData = new FormData(form);
 
         const Calculator = new CalculatorClass();
-
+console.log(Calculator);
         const height = formData.get('imc-calculator-height');
         const weight = formData.get('imc-calculator-weight');
       
