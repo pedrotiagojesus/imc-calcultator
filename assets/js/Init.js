@@ -10,7 +10,9 @@ import { Calculator } from './Calculator.js';
 
         event.preventDefault();
 
-        console.log(this);
+        const form = document.getElementById('imc-calculator-form');;
+        const formData = new FormData(form);
+        console.log(formData);
     });
-    
+
 }());
