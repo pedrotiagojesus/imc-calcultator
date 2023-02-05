@@ -19,10 +19,12 @@ class Calculator {
     set height(value) {
 
         value = parseFloat(value);
-console.log(value);
+        
+        /*
         if (value === 0) {
             throw 'Enter an height value';
         }
+        */
 
         this.height = value;
     }
@@ -32,9 +34,11 @@ console.log(value);
 
         value = parseFloat(value);
 
+        /*
         if (value === 0) {
             throw 'Enter an weight value';
         }
+        */
         
         this.weight = value;
     }
