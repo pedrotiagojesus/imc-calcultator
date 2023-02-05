@@ -1,18 +1,16 @@
 class Calculator {
 
-    constructor() {
-        this._height = 0;
-        this._weight = 0;
-    }
+    _height = 0;
+    _weight = 0;
 
     // Get height
     static get getHeight() {
-      return this._height;
+        return this._height;
     }
 
     // Get weight
     static get getWeight() {
-      return this._weight;
+        return this._weight;
     }
 
     /**
@@ -31,6 +29,8 @@ class Calculator {
         */
 
         this._height = value;
+
+        return this;
     }
 
     /**
@@ -49,6 +49,8 @@ class Calculator {
         */
         
         this._weight = value;
+
+        return this;
     }
 
     // Method
