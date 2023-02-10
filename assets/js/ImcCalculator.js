@@ -63,8 +63,8 @@ class ImcCalculator {
         // cache elements
         this._id = 'section-calculator';
         this._el = document.getElementById(this.id);
-        
-        if (this._el === undefined) {
+        console.log(this._el);
+        if (this._el === undefined || this._el === null) {
             return;
         }
 
