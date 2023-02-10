@@ -10,3 +10,8 @@ main {
 #section-calculator {
     height: 100%;
 }
+
+#section-calculator .calculator-wrapper {
+    width: 100%;
+    max-width: 50%;
+}
