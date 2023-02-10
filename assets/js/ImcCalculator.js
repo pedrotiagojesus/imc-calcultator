@@ -96,6 +96,8 @@ class ImcCalculator {
         this._formSubmitEl.addEventListener("click", async function(event) {
     
             event.preventDefault();
+
+            this._formEl = this._el.querySelector('form');
     
             const formData = new FormData(this._formEl);
 
