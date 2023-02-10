@@ -107,7 +107,7 @@ class ImcCalculator {
             this._height = formData.get('imc-calculator-height');
             this._weight = formData.get('imc-calculator-weight');
     
-            const imcValue = await Calculator.calcImc();
+            const imcValue = await this.calcImc();
 
             console.log(imcValue);
     
