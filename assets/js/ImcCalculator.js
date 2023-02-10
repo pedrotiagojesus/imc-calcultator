@@ -71,6 +71,9 @@ class ImcCalculator {
         this._formEl = this._el.querySelector('form');
         this._formSubmitEl = this._formEl.querySelector('button[type="submit"]');
 
+        console.log(this._formEl);
+        console.log(this._formSubmitEl);
+
         // bind events
         this.onSubmit();
 
