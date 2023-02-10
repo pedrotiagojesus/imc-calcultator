@@ -97,7 +97,7 @@ class ImcCalculator {
     
             event.preventDefault();
 
-            this._formEl = this._el.querySelector('form');
+            scope._formEl = scope._el.querySelector('form');
     
             const formData = new FormData(this._formEl);
 
