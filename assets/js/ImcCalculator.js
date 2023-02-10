@@ -117,8 +117,11 @@ class ImcCalculator {
      *
      * @return {number} The IMC value. 
      */
-    calculateImc() {        
-        return this._weight / this._height ** 2;
+    calculateImc() {
+        
+        const value = this._weight / this._height ** 2;
+        
+        return Number(value);
     }
 }
 
