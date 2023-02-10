@@ -63,16 +63,13 @@ class ImcCalculator {
         // cache elements
         this._id = 'section-calculator';
         this._el = document.getElementById(this._id);
-        console.log(this._el);
+
         if (this._el === undefined || this._el === null) {
             return;
         }
 
         this._formEl = this._el.querySelector('form');
         this._formSubmitEl = this._formEl.querySelector('button[type="submit"]');
-
-        console.log(this._formEl);
-        console.log(this._formSubmitEl);
 
         // bind events
         this.onSubmit();
