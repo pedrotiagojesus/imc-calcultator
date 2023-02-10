@@ -58,6 +58,12 @@ class ImcCalculator {
      */
     _weight = 0;
 
+    /**
+     * Initializes the IMC calculator.
+     * 
+     * @returns {void}
+     * @author Pedro Jesus <pedrotiagojesus1995@gmail.com>
+     */
     constructor() {
 
         // cache elements
@@ -77,16 +83,6 @@ class ImcCalculator {
     }
 
     /**
-     * Calculate IMC value
-     *
-     * @param {number} value The IMC value. 
-     * @return {ImcCalculator}
-     */
-    async calcImc() {        
-        return this._weight / this._height ** 2;
-    }
-
-    /**
      * Callback function that handles the formulary submit.
      *
      * @param {FormData} formData Formulary data to work with.
@@ -94,6 +90,8 @@ class ImcCalculator {
      * @author Pedro Jesus <pedro.jesus@magicbrain.pt>
      */
     onSubmit() {
+
+        const scope = this;
     
         this._formSubmitEl.addEventListener("click", async function(event) {
     
@@ -104,7 +102,7 @@ class ImcCalculator {
             this._height = formData.get('imc-calculator-height');
             this._weight = formData.get('imc-calculator-weight');
     
-            const imcValue = await this.calcImc();
+            const imcValue = scope.calculateImc();
 
             console.log(imcValue);
     
@@ -112,6 +110,15 @@ class ImcCalculator {
 
         return this;
 
+    }
+
+    /**
+     * Calculate IMC value
+     *
+     * @return {number} The IMC value. 
+     */
+    calculateImc() {        
+        return this._weight / this._height ** 2;
     }
 }
 
