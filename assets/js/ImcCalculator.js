@@ -99,7 +99,7 @@ class ImcCalculator {
 
             scope._formEl = scope._el.querySelector('form');
     
-            const formData = new FormData(this._formEl);
+            const formData = new FormData(scope._formEl);
 
             this._height = formData.get('imc-calculator-height');
             this._weight = formData.get('imc-calculator-weight');
