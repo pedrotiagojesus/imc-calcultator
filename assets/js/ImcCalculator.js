@@ -105,8 +105,8 @@ class ImcCalculator {
             scope._weight = formData.get('imc-calculator-weight');
     
             const imcValue = scope.calculateImc();
-
-            console.log(imcValue);
+            
+            scope.displayResult(imcValue);
     
         });
 
@@ -127,6 +127,18 @@ class ImcCalculator {
         const value = this._weight / this._height ** 2;
         
         return Number(value);
+    }
+
+    displayResult(value = 0) {
+
+        const resultWrapper = this._el.querySelector('[data-tpl="calculator-result"]');
+
+        if (resultWrapper.classList.contains('d-none')) {
+            resultWrapper.classList.remove('d-none')
+        }
+
+        resultWrapper.querySelector('[data-tpl="calculator-result-value"]').innerText = value;
+
     }
 }
 
