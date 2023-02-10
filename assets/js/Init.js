@@ -1,14 +1,16 @@
-import { Calculator as CalculatorClass } from './Calculator.js';
+import { ImcCalculator } from './Calculator.js';
 
 (function () {
 
+    const imcCalculator = new ImcCalculator();
+
     var button = document.querySelector('form button[type="submit"]');
 
-    button.addEventListener("click", function(event) {
+    button.addEventListener("click", async function(event) {
 
         event.preventDefault();
 
-        const form = document.getElementById('imc-calculator-form');;
+        const form = document.getElementById('imc-calculator-form');
         const formData = new FormData(form);
 
         const Calculator = new CalculatorClass();
@@ -19,7 +21,9 @@ import { Calculator as CalculatorClass } from './Calculator.js';
         Calculator.height = height;
         Calculator.weight = weight;
 
-        console.log(Calculator.calc());
+        const imcValue = await Calculator.calcImc();
+        
+
 
     });
 
