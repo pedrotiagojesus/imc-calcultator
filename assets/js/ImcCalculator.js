@@ -141,9 +141,18 @@ class ImcCalculator {
 
         // Position result marker
         const resultMarker = resultWrapper.querySelector('[data-tpl="calculator-result-marker"]');
-        const markerValue = value - 18.5;
+        var markerValue = value - 18.5;
+            markerValue = (markerValue * 100) / 21.5;
         
-        resultMarker.style.left = (markerValue * 100) / 21.5 + '%';
+        if (markerValue < 0) {
+            markerValue = 0;
+        }
+
+        if (markerValue > 100) {
+            markerValue = 100;
+        }
+        
+        resultMarker.style.left = markerValue + '%';
 
     }
 }
