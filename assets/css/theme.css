@@ -25,4 +25,5 @@ main {
     bottom: 100%;
     left: 0%;
     transition: all 1s;
+    font-size: 2rem;
 }
