@@ -153,17 +153,17 @@ class ImcCalculator {
         }
 
         if (markerValue > 75 && markerValue <= 100) {
-            resultMarker.classList.remove('text-success', 'text-warning', 'text-danger');
-            resultMarker.classList.add('text-primary');
-        } else if (markerValue > 50 && markerValue <= 75) {
-            resultMarker.classList.remove('text-primary', 'text-warning', 'text-danger');
-            resultMarker.classList.add('text-success');
-        } else if (markerValue > 25 && markerValue <= 50) {
-            resultMarker.classList.remove('text-success', 'text-primary', 'text-danger');
-            resultMarker.classList.add('text-warning');
-        } else {
             resultMarker.classList.remove('text-success', 'text-warning', 'text-primary');
             resultMarker.classList.add('text-danger');
+        } else if (markerValue > 50 && markerValue <= 75) {
+            resultMarker.classList.remove('text-success', 'text-primary', 'text-danger');
+            resultMarker.classList.add('text-warning');
+        } else if (markerValue > 25 && markerValue <= 50) {
+            resultMarker.classList.remove('text-primary', 'text-warning', 'text-danger');
+            resultMarker.classList.add('text-success');
+        } else {
+            resultMarker.classList.remove('text-success', 'text-warning', 'text-danger');
+            resultMarker.classList.add('text-primary');
         }
 
         resultMarker.style.left = markerValue + '%';
