@@ -15,3 +15,13 @@ main {
     width: 100%;
     max-width: 50%;
 }
+
+#calculator-result-bar {
+    position: relative;
+}
+
+#calculator-result-marker {
+    position: absolute;
+    bottom: 100%;
+    left: 0%;
+}

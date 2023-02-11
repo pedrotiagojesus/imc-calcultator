@@ -139,6 +139,10 @@ class ImcCalculator {
 
         resultWrapper.querySelector('[data-tpl="calculator-result-value"]').innerText = value;
 
+        // Position result marker
+        const resultMarker = resultWrapper.getElementById('calculator-result-marker');
+        resultMarker.style.width = (value * 100) / 40 + '%';
+
     }
 }
 
