@@ -146,10 +146,12 @@ class ImcCalculator {
 
         if (markerValue < 0) {
             markerValue = 0;
-        }
-
-        if (markerValue > 100) {
+            resultMarker.classList.add('blink');
+        } else if (markerValue > 100) {
             markerValue = 100;
+            resultMarker.classList.add('blink');
+        } else {
+            resultMarker.classList.remove('blink');
         }
 
         if (markerValue > 75 && markerValue <= 100) {
@@ -159,11 +161,11 @@ class ImcCalculator {
             resultMarker.classList.remove('text-success', 'text-primary', 'text-danger');
             resultMarker.classList.add('text-warning');
         } else if (markerValue > 25 && markerValue <= 50) {
-            resultMarker.classList.remove('text-primary', 'text-warning', 'text-danger');
-            resultMarker.classList.add('text-success');
-        } else {
             resultMarker.classList.remove('text-success', 'text-warning', 'text-danger');
             resultMarker.classList.add('text-primary');
+        } else {
+            resultMarker.classList.remove('text-primary', 'text-warning', 'text-danger');
+            resultMarker.classList.add('text-success');
         }
 
         resultMarker.style.left = markerValue + '%';
