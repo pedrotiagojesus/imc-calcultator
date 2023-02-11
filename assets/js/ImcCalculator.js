@@ -138,9 +138,9 @@ class ImcCalculator {
         }
 
         resultWrapper.querySelector('[data-tpl="calculator-result-value"]').innerText = value;
-console.log(resultWrapper);
+
         // Position result marker
-        const resultMarker = resultWrapper.getElementById('calculator-result-marker');
+        const resultMarker = this._el.getElementById('calculator-result-marker');
         resultMarker.style.width = (value * 100) / 40 + '%';
 
     }
