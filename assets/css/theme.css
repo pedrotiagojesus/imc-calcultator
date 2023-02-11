@@ -20,7 +20,7 @@ main {
     position: relative;
 }
 
-#calculator-result-marker {
+.calculator-result-marker {
     position: absolute;
     bottom: 100%;
     left: 0%;
