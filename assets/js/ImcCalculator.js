@@ -9,7 +9,7 @@
  * @since 10-02-2023 First time this was introduced.
  */
 class ImcCalculator {
-    
+
     /**
      * Holds the widget DOM element ID.
      *
@@ -25,7 +25,7 @@ class ImcCalculator {
      * @author Pedro Jesus <pedrotiagojesus1995@gmail.com>
      */
     _el = null;
-    
+
     /**
      * Holds formulary DOM element object.
      *
@@ -33,7 +33,7 @@ class ImcCalculator {
      * @author Pedro Jesus <pedrotiagojesus1995@gmail.com>
      */
     _formEl = null;
-    
+
     /**
      * Holds formulary submit DOM element object.
      *
@@ -41,7 +41,7 @@ class ImcCalculator {
      * @author Pedro Jesus <pedrotiagojesus1995@gmail.com>
      */
     _formSubmitEl = null;
-    
+
     /**
      * Holds height value use for IMC calculation
      *
@@ -92,22 +92,22 @@ class ImcCalculator {
     onSubmit() {
 
         const scope = this;
-    
-        this._formSubmitEl.addEventListener("click", async function(event) {
-    
+
+        this._formSubmitEl.addEventListener("click", async function (event) {
+
             event.preventDefault();
 
             scope._formEl = scope._el.querySelector('form');
-    
+
             const formData = new FormData(scope._formEl);
 
             scope._height = formData.get('imc-calculator-height');
             scope._weight = formData.get('imc-calculator-weight');
-    
+
             const imcValue = scope.calculateImc();
-            
+
             scope.displayResult(imcValue);
-    
+
         });
 
         return this;
@@ -120,13 +120,13 @@ class ImcCalculator {
      * @return {number} The IMC value. 
      */
     calculateImc() {
-        
+
         console.log(this._weight);
         console.log(this._height);
 
         const value = this._weight / (this._height ** 2);
-        
-        return Number(value);
+
+        return Number(value).toFixed(1);
     }
 
     displayResult(value = 0) {
@@ -142,8 +142,8 @@ class ImcCalculator {
         // Position result marker
         const resultMarker = resultWrapper.querySelector('[data-tpl="calculator-result-marker"]');
         var markerValue = value - 18.5;
-            markerValue = (markerValue * 100) / 21.5;
-        
+        markerValue = (markerValue * 100) / 21.5;
+
         if (markerValue < 0) {
             markerValue = 0;
         }
@@ -151,10 +151,24 @@ class ImcCalculator {
         if (markerValue > 100) {
             markerValue = 100;
         }
-        
+
+        if (markerValue > 75 && markerValue <= 100) {
+            resultMarker.classList.remove('text-success', 'text-warning', 'text-danger');
+            resultMarker.classList.add('text-primary');
+        } else if (markerValue > 50 && markerValue <= 75) {
+            resultMarker.classList.remove('text-primary', 'text-warning', 'text-danger');
+            resultMarker.classList.add('text-success');
+        } else if (markerValue > 25 && markerValue <= 50) {
+            resultMarker.classList.remove('text-success', 'text-primary', 'text-danger');
+            resultMarker.classList.add('text-warning');
+        } else {
+            resultMarker.classList.remove('text-success', 'text-warning', 'text-primary');
+            resultMarker.classList.add('text-danger');
+        }
+
         resultMarker.style.left = markerValue + '%';
 
     }
 }
 
-export {ImcCalculator};
+export { ImcCalculator };
