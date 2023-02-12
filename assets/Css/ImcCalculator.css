@@ -12,6 +12,7 @@
     left: 0%;
     transition: all 1s;
     font-size: 2.5rem;
+    transform: translateX(-55%);
 }
 
 #calculator-result-value {
@@ -30,6 +31,16 @@
 @keyframes blinker {
     50% {
         opacity: 0;
+    }
+}
+
+.pusle {
+    animation: pusle 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        transform: scale(2.0);
     }
 }
 

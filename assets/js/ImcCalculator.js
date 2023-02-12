@@ -60,7 +60,7 @@ class ImcCalculator {
 
     /**
      * Initializes the IMC calculator.
-     * 
+     *
      * @returns {void}
      * @author Pedro Jesus <pedrotiagojesus1995@gmail.com>
      */
@@ -117,7 +117,7 @@ class ImcCalculator {
     /**
      * Calculate IMC value
      *
-     * @return {number} The IMC value. 
+     * @return {number} The IMC value.
      */
     calculateImc() {
 
@@ -149,9 +149,9 @@ class ImcCalculator {
             resultMarker.classList.add('blink');
         } else if (markerValue > 100) {
             markerValue = 100;
-            resultMarker.classList.add('blink');
+            resultMarker.classList.add('pusle');
         } else {
-            resultMarker.classList.remove('blink');
+            resultMarker.classList.remove('pusle');
         }
 
         if (markerValue > 75 && markerValue <= 100) {
