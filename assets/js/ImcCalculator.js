@@ -134,7 +134,7 @@ class ImcCalculator {
         const resultWrapper = this._el.querySelector('[data-tpl="calculator-result"]');
 
         if (!resultWrapper.classList.contains('show')) {
-            resultWrapper.classList.ad('show');
+            resultWrapper.classList.add('show');
         }
 
         resultWrapper.querySelector('[data-tpl="calculator-result-value"]').innerText = value;
