@@ -34,11 +34,11 @@
     }
 }
 
-.pusle {
-    animation: pusle 1s linear infinite;
+.pulse {
+    animation: pulse 1s linear infinite;
 }
 
-@keyframes blinker {
+@keyframes pulse {
     50% {
         transform: scale(2.0);
     }
