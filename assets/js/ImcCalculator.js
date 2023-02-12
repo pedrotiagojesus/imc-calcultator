@@ -146,12 +146,12 @@ class ImcCalculator {
 
         if (markerValue < 0) {
             markerValue = 0;
-            resultMarker.classList.add('blink');
+            resultMarker.classList.add('pulse');
         } else if (markerValue > 100) {
             markerValue = 100;
-            resultMarker.classList.add('pusle');
+            resultMarker.classList.add('pulse');
         } else {
-            resultMarker.classList.remove('pusle');
+            resultMarker.classList.remove('pulse');
         }
 
         if (markerValue > 75 && markerValue <= 100) {
