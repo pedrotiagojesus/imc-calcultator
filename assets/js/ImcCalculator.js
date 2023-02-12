@@ -121,9 +121,6 @@ class ImcCalculator {
      */
     calculateImc() {
 
-        console.log(this._weight);
-        console.log(this._height);
-
         const value = this._weight / (this._height ** 2);
 
         return Number(value).toFixed(1);
