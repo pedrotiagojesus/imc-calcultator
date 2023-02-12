@@ -37,9 +37,37 @@
     width: 100%;
 }
 
-@media (max-width: map-get($grid-breakpoints, lg)){
+@media (max-width: var(--bs-breakpoint-sm)){
 
     #section-calculator .calculator-wrapper {
         max-width: 50%;
-     }
-  }
+    }
+}
+
+@media (max-width: var(--bs-breakpoint-md)){
+
+    #section-calculator .calculator-wrapper {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: var(--bs-breakpoint-lg)){
+
+    #section-calculator .calculator-wrapper {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: var(--bs-breakpoint-xl)){
+
+    #section-calculator .calculator-wrapper {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: var(--bs-breakpoint-xll)){
+
+    #section-calculator .calculator-wrapper {
+        max-width: 50%;
+    }
+}
