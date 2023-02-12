@@ -40,7 +40,7 @@
 
 @keyframes pulse {
     50% {
-        transform: scale(2.0);
+        transform: translate(-50%,-25%)scale(1.25)
     }
 }
 
