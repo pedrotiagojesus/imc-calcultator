@@ -35,25 +35,11 @@
 
 #section-calculator .calculator-wrapper {
     width: 100%;
-    @include media-breakpoint-up(lg) {
+}
+
+@media (max-width: map-get($grid-breakpoints, lg)){
+
+    #section-calculator .calculator-wrapper {
         max-width: 50%;
-    }
-}
-
-@include media-breakpoint-up(sm) {}
-
-@include media-breakpoint-up(md) {
-    ...
-}
-
-@include media-breakpoint-up(lg) {
-    ...
-}
-
-@include media-breakpoint-up(xl) {
-    ...
-}
-
-@include media-breakpoint-up(xxl) {
-    ...
-}
+     }
+  }
