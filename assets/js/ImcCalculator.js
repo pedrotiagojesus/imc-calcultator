@@ -106,7 +106,7 @@ class ImcCalculator {
 
             const imcValue = scope.calculateImc();
 
-            scope.displayResult(imcValue);
+            scope.result(imcValue);
 
         });
 
@@ -118,6 +118,7 @@ class ImcCalculator {
      * Calculate IMC value
      *
      * @return {number} The IMC value.
+     * @author Pedro Jesus <pedro.jesus@magicbrain.pt>
      */
     calculateImc() {
 
@@ -126,21 +127,31 @@ class ImcCalculator {
         return Number(value).toFixed(1);
     }
 
-    displayResult(value = 0) {
+    /**
+     * Result
+     *
+     * @param {Number} value  The IMC value.
+     * @return {ImcCalculator}
+     * @author Pedro Jesus <pedro.jesus@magicbrain.pt>
+     */
+    result(value = 0) {
 
         const resultWrapper = this._el.querySelector('[data-tpl="calculator-result"]');
 
+        // Display
         if (!resultWrapper.classList.contains('show')) {
             resultWrapper.classList.add('show');
             resultWrapper.style.maxHeight = resultWrapper.scrollHeight + "px";
         }
 
+        // Put the result
         resultWrapper.querySelector('[data-tpl="calculator-result-value"]').innerText = value;
 
         // Position result marker
         const resultMarker = resultWrapper.querySelector('[data-tpl="calculator-result-marker"]');
         var markerValue = value - 18.5;
         markerValue = (markerValue * 100) / 21.5;
+        resultMarker.style.left = markerValue + '%';
 
         if (markerValue < 0) {
             markerValue = 0;
@@ -152,6 +163,7 @@ class ImcCalculator {
             resultMarker.classList.remove('pulse');
         }
 
+        // Handle the colors
         if (markerValue > 75 && markerValue <= 100) {
             resultMarker.classList.remove('text-success', 'text-warning', 'text-primary');
             resultMarker.classList.add('text-danger');
@@ -166,7 +178,11 @@ class ImcCalculator {
             resultMarker.classList.add('text-success');
         }
 
-        resultMarker.style.left = markerValue + '%';
+        // Highlight progress bar
+        const progressBarArr = resultWrapper.querySelector('[data-tpl="calculator-progress-bar"]');
+        progressBarArr.forEach(progressBar => {
+            console.log(progressBar);
+        });
 
     }
 }
