@@ -187,9 +187,9 @@ class ImcCalculator {
             const maxValue = Number(progressBar.dataset.tplMax);
 
             if (minValue <= value && value <= maxValue) {
-                progressBar.children.classList.add('active');
+                progressBar.children[0].classList.add('active');
             } else {
-                progressBar.children.classList.remove('active');
+                progressBar.children[0].classList.remove('active');
             }
 
             console.log('Min: ' + minValue);
