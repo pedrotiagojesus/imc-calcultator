@@ -179,7 +179,7 @@ class ImcCalculator {
         }
 
         // Highlight progress bar
-        const progressBarArr = resultWrapper.querySelector('[data-tpl="calculator-progress-bar"]');
+        const progressBarArr = resultWrapper.querySelectorAll('[data-tpl="calculator-progress-bar"]');
 console.log(progressBarArr);
         progressBarArr.forEach(progressBar => {
             console.log(progressBar);
