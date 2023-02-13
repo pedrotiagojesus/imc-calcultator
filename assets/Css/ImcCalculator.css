@@ -49,16 +49,16 @@
 }
 
 #calculator-result {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
     display: none;
-    height: 0;
-    opacity: 0;
-    transition: all 1s;
 }
 
 #calculator-result.show {
     display: block;
-    height: 100%;
-    opacity: 1;
 }
 
 @media (min-width: 576px) {}

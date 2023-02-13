@@ -132,6 +132,7 @@ class ImcCalculator {
 
         if (!resultWrapper.classList.contains('show')) {
             resultWrapper.classList.add('show');
+            resultWrapper.style.maxHeight = resultWrapper.scrollHeight + "px";
         }
 
         resultWrapper.querySelector('[data-tpl="calculator-result-value"]').innerText = value;
