@@ -180,9 +180,15 @@ class ImcCalculator {
 
         // Highlight progress bar
         const progressBarArr = resultWrapper.querySelectorAll('[data-tpl="calculator-progress-bar"]');
-console.log(progressBarArr);
+
         progressBarArr.forEach(progressBar => {
-            console.log(progressBar);
+
+            const minValue = Number(progressBar.dataset.minValue);
+            const maxValue = Number(progressBar.dataset.maxValue);
+
+            console.log('Min: ' + minValue);
+            console.log('Max: ' + maxValue);
+            console.log('Value: ' + value);
         });
 
     }
