@@ -183,10 +183,8 @@ class ImcCalculator {
 
         progressBarArr.forEach(progressBar => {
 
-            console.log(progressBar);
-
-            const minValue = Number(progressBar.dataset.minValue);
-            const maxValue = Number(progressBar.dataset.maxValue);
+            const minValue = Number(progressBar.dataset.tplMin);
+            const maxValue = Number(progressBar.dataset.tplMax);
 
             console.log('Min: ' + minValue);
             console.log('Max: ' + maxValue);
