@@ -46,7 +46,7 @@
 
 @keyframes sparkling {
     50% {
-        opacity: 0;
+        filter: brightness(125%);
     }
 }
 
