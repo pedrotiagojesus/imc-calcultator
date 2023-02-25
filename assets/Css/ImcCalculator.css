@@ -44,6 +44,12 @@
     }
 }
 
+@keyframes sparkling {
+    50% {
+        opacity: 0;
+    }
+}
+
 #section-calculator .calculator-wrapper {
     width: 100%;
 }
@@ -62,7 +68,7 @@
 }
 
 .progress-bar.active {
-    box-shadow: inset 1px 1px 10px 1px rgba(var(--bs-info-rgb), 1);
+    animation: sparkling 1s linear infinite;
 }
 
 @media (min-width: 576px) {}
