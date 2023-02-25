@@ -71,6 +71,7 @@ class ImcCalculator {
         this._el = document.getElementById(this._id);
 
         if (this._el === undefined || this._el === null) {
+            console.info(this.constructor.name)
             return;
         }
 
