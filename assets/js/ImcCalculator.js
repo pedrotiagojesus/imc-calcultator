@@ -11,14 +11,6 @@
 class ImcCalculator {
 
     /**
-     * Holds the widget DOM element ID.
-     *
-     * @property {string}
-     * @author Pedro Jesus <pedrotiagojesus1995@gmail.com>
-     */
-    _id = null;
-
-    /**
      * Holds a reference to the DOM element object.
      *
      * @property {element}
@@ -64,16 +56,17 @@ class ImcCalculator {
      * @returns {void}
      * @author Pedro Jesus <pedrotiagojesus1995@gmail.com>
      */
-    constructor() {
+    constructor(id = '', name = '') {
 
         // cache elements
-        this._id = 'section-calculator';
-        this._el = document.getElementById(this._id);
+        this._el = document.getElementById(id);
 
         if (this._el === undefined || this._el === null) {
-            console.info('Class ${this.constructor.name} not loaded!');
+            console.info('Class ' + name + ' not loaded!');
             return;
         }
+
+        console.info('Loading ' + name + '...')
 
         this._formEl = this._el.querySelector('form');
         this._formSubmitEl = this._formEl.querySelector('button[type="submit"]');
