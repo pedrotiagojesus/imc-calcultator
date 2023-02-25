@@ -14,62 +14,58 @@
 
 <body>
     <main>
-        <section id="section-calculator" class="container-fluid d-flex justify-content-center align-items-center">
+        <section id="section-imc-calculator" class="container-fluid d-flex justify-content-center align-items-center h-100">
             <div class="card calculator-wrapper">
                 <h4 class="card-header">Calculadora IMC</h4>
-                <div class="card-body">
-                    <form id="imc-calculator-form" method="post">
-                        <div class="mb-3">
-                            <label for="imc-calculator-height" class="form-label">Altura</label>
-                            <div class="input-group">
-                                <input type="number" min="0" step="0.01" value="1.77" class="form-control"
-                                    id="imc-calculator-height" name="imc-calculator-height"
-                                    aria-describedby="imcCalculatorHeight" required>
-                                <span class="input-group-text">M</span>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="imc-calculator-weight" class="form-label">Peso</label>
-                            <div class="input-group">
-                                <input type="number" min="0" step="0.01" value="70" class="form-control"
-                                    id="imc-calculator-weight" name="imc-calculator-weight"
-                                    aria-describedby="imcCalculatorWeight" required>
-                                <span class="input-group-text">Kg</span>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-end">
-                            <button type="submit" class="btn btn-primary">Calcular</button>
-                        </div>
-                    </form>
-                </div>
-                <div id="calculator-result" data-tpl="calculator-result">
-                    <div class="card-body border-top" >
-                        <h6>Resultado</h6>
-                        <div id="calculator-result-bar" class="mt-5">
-                            <div class="progress-stacked">
-                                <div class="progress" role="progressbar" data-tpl="calculator-progress-bar" data-tpl-min="0" data-tpl-max="0" style="width: 0%" title="Magreza">
-                                </div>
-                                <div class="progress" role="progressbar" data-tpl="calculator-progress-bar" data-tpl-min="18.5" data-tpl-max="24.9" style="width: 25%" title="Normal">
-                                    <div class="progress-bar bg-success"></div>
-                                </div>
-                                <div class="progress" role="progressbar" data-tpl="calculator-progress-bar" data-tpl-min="25" data-tpl-max="29.9" style="width: 25%" title="Sobrepeso">
-                                    <div class="progress-bar"></div>
-                                </div>
-                                <div class="progress" role="progressbar" data-tpl="calculator-progress-bar" data-tpl-min="30" data-tpl-max="34.9" style="width: 25%" title="Obesidade grau I">
-                                    <div class="progress-bar bg-warning"></div>
-                                </div>
-                                <div class="progress" role="progressbar" data-tpl="calculator-progress-bar" data-tpl-min="35" data-tpl-max="39.9" style="width: 25%" title="Obesidade grau II">
-                                    <div class="progress-bar bg-danger"></div>
-                                </div>
-                                <div class="progress" role="progressbar" data-tpl="calculator-progress-bar" data-tpl-min="40" data-tpl-max="999" style="width: 0%" title="Obesidade grau III">
-                                </div>
-                            </div>
-                            <span class="fa-solid fa-location-pin calculator-result-marker text-primary"
-                                data-tpl="calculator-result-marker">
-                                <span id="calculator-result-value" data-tpl="calculator-result-value"></span>
-                            </span>
+                <form class="card-body" id="imc-calculator-form" method="post">
+                    <div class="mb-3">
+                        <label for="imc-calculator-height" class="form-label">Altura</label>
+                        <div class="input-group">
+                            <input type="number" min="0" step="0.01" value="1.77" class="form-control"
+                                id="imc-calculator-height" name="imc-calculator-height"
+                                aria-describedby="imcCalculatorHeight" required>
+                            <span class="input-group-text">M</span>
                         </div>
                     </div>
+                    <div class="mb-3">
+                        <label for="imc-calculator-weight" class="form-label">Peso</label>
+                        <div class="input-group">
+                            <input type="number" min="0" step="0.01" value="70" class="form-control"
+                                id="imc-calculator-weight" name="imc-calculator-weight"
+                                aria-describedby="imcCalculatorWeight" required>
+                            <span class="input-group-text">Kg</span>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">Calcular</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-body border-top" data-tpl="calculator-result">
+                <h6>Resultado</h6>
+                <div id="calculator-result-bar" class="mt-5">
+                    <div class="progress-stacked">
+                        <div class="progress" role="progressbar" data-tpl="calculator-progress-bar" data-tpl-min="0" data-tpl-max="0" style="width: 0%" title="Magreza">
+                        </div>
+                        <div class="progress" role="progressbar" data-tpl="calculator-progress-bar" data-tpl-min="18.5" data-tpl-max="24.9" style="width: 25%" title="Normal">
+                            <div class="progress-bar bg-success"></div>
+                        </div>
+                        <div class="progress" role="progressbar" data-tpl="calculator-progress-bar" data-tpl-min="25" data-tpl-max="29.9" style="width: 25%" title="Sobrepeso">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="progress" role="progressbar" data-tpl="calculator-progress-bar" data-tpl-min="30" data-tpl-max="34.9" style="width: 25%" title="Obesidade grau I">
+                            <div class="progress-bar bg-warning"></div>
+                        </div>
+                        <div class="progress" role="progressbar" data-tpl="calculator-progress-bar" data-tpl-min="35" data-tpl-max="39.9" style="width: 25%" title="Obesidade grau II">
+                            <div class="progress-bar bg-danger"></div>
+                        </div>
+                        <div class="progress" role="progressbar" data-tpl="calculator-progress-bar" data-tpl-min="40" data-tpl-max="999" style="width: 0%" title="Obesidade grau III">
+                        </div>
+                    </div>
+                    <span class="fa-solid fa-location-pin calculator-result-marker text-primary"
+                        data-tpl="calculator-result-marker">
+                        <span id="calculator-result-value" data-tpl="calculator-result-value"></span>
+                    </span>
                 </div>
             </div>
         </section>
