@@ -40,31 +40,31 @@
                         <button type="submit" class="btn btn-primary">Calcular</button>
                     </div>
                 </form>
-            </div>
-            <div id="imc-calculator-result" class="card-body border-top" data-tpl="imc-calculator-result">
-                <h6>Resultado</h6>
-                <div id="calculator-result-bar" class="mt-5">
-                    <div>
-                        <div role="progressbar" data-tpl="imc-calculator-graph" data-tpl-min="0" data-tpl-max="0" style="width: 0%" title="Magreza">
+                <div id="imc-calculator-result" class="card-body border-top" data-tpl="imc-calculator-result">
+                    <h6>Resultado</h6>
+                    <div id="calculator-result-bar" class="mt-5">
+                        <div>
+                            <div role="progressbar" data-tpl="imc-calculator-graph" data-tpl-min="0" data-tpl-max="0" style="width: 0%" title="Magreza">
+                            </div>
+                            <div role="progressbar" data-tpl="imc-calculator-graph" data-tpl-min="18.5" data-tpl-max="24.9" style="width: 25%" title="Normal">
+                                <div class="progress-bar bg-success"></div>
+                            </div>
+                            <div role="progressbar" data-tpl="imc-calculator-graph" data-tpl-min="25" data-tpl-max="29.9" style="width: 25%" title="Sobrepeso">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <div role="progressbar" data-tpl="imc-calculator-graph" data-tpl-min="30" data-tpl-max="34.9" style="width: 25%" title="Obesidade grau I">
+                                <div class="progress-bar bg-warning"></div>
+                            </div>
+                            <div role="progressbar" data-tpl="imc-calculator-graph" data-tpl-min="35" data-tpl-max="39.9" style="width: 25%" title="Obesidade grau II">
+                                <div class="progress-bar bg-danger"></div>
+                            </div>
+                            <div role="progressbar" data-tpl="imc-calculator-graph" data-tpl-min="40" data-tpl-max="999" style="width: 0%" title="Obesidade grau III">
+                            </div>
                         </div>
-                        <div role="progressbar" data-tpl="imc-calculator-graph" data-tpl-min="18.5" data-tpl-max="24.9" style="width: 25%" title="Normal">
-                            <div class="progress-bar bg-success"></div>
-                        </div>
-                        <div role="progressbar" data-tpl="imc-calculator-graph" data-tpl-min="25" data-tpl-max="29.9" style="width: 25%" title="Sobrepeso">
-                            <div class="progress-bar"></div>
-                        </div>
-                        <div role="progressbar" data-tpl="imc-calculator-graph" data-tpl-min="30" data-tpl-max="34.9" style="width: 25%" title="Obesidade grau I">
-                            <div class="progress-bar bg-warning"></div>
-                        </div>
-                        <div role="progressbar" data-tpl="imc-calculator-graph" data-tpl-min="35" data-tpl-max="39.9" style="width: 25%" title="Obesidade grau II">
-                            <div class="progress-bar bg-danger"></div>
-                        </div>
-                        <div role="progressbar" data-tpl="imc-calculator-graph" data-tpl-min="40" data-tpl-max="999" style="width: 0%" title="Obesidade grau III">
-                        </div>
+                        <span class="fa-solid fa-location-pin calculator-result-marker text-primary"data-tpl="calculator-result-marker">
+                            <span id="calculator-result-value" data-tpl="calculator-result-value"></span>
+                        </span>
                     </div>
-                    <span class="fa-solid fa-location-pin calculator-result-marker text-primary"data-tpl="calculator-result-marker">
-                        <span id="calculator-result-value" data-tpl="calculator-result-value"></span>
-                    </span>
                 </div>
             </div>
         </section>
