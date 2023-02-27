@@ -131,7 +131,7 @@ class ImcCalculator {
     result(value = 0) {
 
         const resultWrapper = this._el.querySelector('[data-tpl="imc-calculator-result"]');
-
+console.log(resultWrapper);
         // Display
         if (!resultWrapper.classList.contains('show')) {
             resultWrapper.classList.add('show');
@@ -190,10 +190,12 @@ class ImcCalculator {
                 }
             }
 
+            /*
             console.log('Min: ' + minValue);
             console.log('Max: ' + maxValue);
             console.log('Value: ' + value);
             console.log(minValue <= value && value <= maxValue);
+            */
         });
 
     }
