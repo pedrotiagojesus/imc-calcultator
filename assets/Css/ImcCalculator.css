@@ -11,6 +11,10 @@
     display: block;
 }
 
+#imc-calculator-result .imc-calculator-graph {
+    height: 5px;
+}
+
 
 
 
