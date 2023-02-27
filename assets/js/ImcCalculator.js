@@ -145,7 +145,6 @@ class ImcCalculator {
         const resultMarker = resultWrapper.querySelector('[data-tpl="calculator-result-marker"]');
         var markerValue = value - 18.5;
         markerValue = (markerValue * 100) / 21.5;
-        resultMarker.style.left = markerValue + '%';
 
         if (markerValue < 0) {
             markerValue = 0;
@@ -156,6 +155,8 @@ class ImcCalculator {
         } else {
             resultMarker.classList.remove('pulse');
         }
+
+        resultMarker.style.left = markerValue + '%';
 
         // Handle the colors
         if (markerValue > 75 && markerValue <= 100) {
