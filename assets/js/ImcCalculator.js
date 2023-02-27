@@ -130,7 +130,7 @@ class ImcCalculator {
      */
     result(value = 0) {
 
-        const resultWrapper = this._el.querySelector('[data-tpl="calculator-result"]');
+        const resultWrapper = this._el.querySelector('[data-tpl="imc-calculator-result"]');
 
         // Display
         if (!resultWrapper.classList.contains('show')) {
@@ -173,7 +173,7 @@ class ImcCalculator {
         }
 
         // Highlight progress bar
-        const progressBarArr = resultWrapper.querySelectorAll('[data-tpl="calculator-progress-bar"]');
+        const progressBarArr = resultWrapper.querySelectorAll('[data-tpl="imc-calculator-graph"]');
 
         progressBarArr.forEach(progressBar => {
 
