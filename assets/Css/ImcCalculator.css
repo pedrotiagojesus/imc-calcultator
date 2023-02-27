@@ -1,3 +1,29 @@
+#imc-calculator-result {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    display: none;
+}
+
+#imc-calculator-result.show {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #calculator-result-bar {
     position: relative;
 }
@@ -48,19 +74,6 @@
 
 #section-calculator .calculator-wrapper {
     width: 100%;
-}
-
-#calculator-result {
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    display: none;
-}
-
-#calculator-result.show {
-    display: block;
 }
 
 .progress-bar.active {
