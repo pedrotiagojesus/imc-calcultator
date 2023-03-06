@@ -12,7 +12,7 @@ class Core {
      * Instanciates a new core class.
      *
      * @returns {void}
-     * @author Salustiano Silva <salustiano.silva@magicbrain.pt>
+     * @author Pedro Jesus <pedrotiagojesus1995@gmail.com>
      */
     constructor() {
 
@@ -30,7 +30,7 @@ class Core {
      *
      * @param  {...any} args
      * @returns {Core} This class instance.
-     * @author Salustiano Silva <salustiano.silva@magicbrain.pt>
+     * @author Pedro Jesus <pedrotiagojesus1995@gmail.com>
      */
     log(...args) {
 
@@ -55,7 +55,7 @@ class Core {
      *
      * @param  {...any} args
      * @returns {Core} This class instance.
-     * @author Salustiano Silva <salustiano.silva@magicbrain.pt>
+     * @author Pedro Jesus <pedrotiagojesus1995@gmail.com>
      */
     logInfo(...args) {
 
@@ -80,7 +80,7 @@ class Core {
      *
      * @param  {...any} args
      * @returns {Core} This class instance.
-     * @author Salustiano Silva <salustiano.silva@magicbrain.pt>
+     * @author Pedro Jesus <pedrotiagojesus1995@gmail.com>
      */
     logErr(...args) {
 

@@ -35,6 +35,14 @@ class ImcCalculator extends Core {
     _formSubmitEl = null;
 
     /**
+     * Holds calculator result submit DOM element object.
+     *
+     * @property {element}
+     * @author Pedro Jesus <pedrotiagojesus1995@gmail.com>
+     */
+    _calculatorResultEl = null;
+
+    /**
      * Holds height value use for IMC calculation
      *
      * @property {number}
@@ -64,11 +72,11 @@ class ImcCalculator extends Core {
         this._el = document.getElementById(id);
 
         if (this._el === undefined || this._el === null) {
-            this.logInfo('Class ' + name + ' not loaded!');
+            this.logInfo('Class not loaded!');
             return;
         }
 
-        this.logInfo('Loading ' + name + '...');
+        this.logInfo('Loading...');
 
         this._formEl = this._el.querySelector('form');
         this._formSubmitEl = this._formEl.querySelector('button[type="submit"]');
@@ -76,7 +84,7 @@ class ImcCalculator extends Core {
         // bind events
         this.onSubmit();
 
-        this.logInfo(name + ' loaded ...');
+        this.logInfo('Loaded complete!');
 
     }
 
@@ -103,6 +111,8 @@ class ImcCalculator extends Core {
             scope._weight = formData.get('imc-calculator-weight');
 
             const imcValue = scope.calculateImc();
+
+            scope._calculatorResultEl = this._el.querySelector('[data-tpl="imc-calculator-result"]');
 
             scope.result(imcValue);
 
@@ -134,27 +144,24 @@ class ImcCalculator extends Core {
      */
     result(value = 0) {
 
-        const resultWrapper = this._el.querySelector('[data-tpl="imc-calculator-result"]');
+
 
         // Display
-        if (!resultWrapper.classList.contains('show')) {
-            resultWrapper.classList.add('show');
-            resultWrapper.style.maxHeight = resultWrapper.scrollHeight + "px";
+        if (!this._calculatorResultEl.classList.contains('show')) {
+            this._calculatorResultEl.classList.add('show');
+            this._calculatorResultEl.style.maxHeight = this._calculatorResultEl.scrollHeight + "px";
         }
 
         // Put the result
-        resultWrapper.querySelector('[data-tpl="calculator-result-value"]').innerText = value;
+        this._calculatorResultEl.querySelector('[data-tpl="calculator-result-value"]').innerText = value;
 
         // Position result marker
-        const resultMarker = resultWrapper.querySelector('[data-tpl="calculator-result-marker"]');
+        const resultMarker = this._calculatorResultEl.querySelector('[data-tpl="calculator-result-marker"]');
         var markerValue = value - 18.5;
         markerValue = (markerValue * 100) / 21.5;
 
-        if (markerValue < 0) {
+        if (markerValue < 0 || markerValue > 100) {
             markerValue = 0;
-            resultMarker.classList.add('pulse');
-        } else if (markerValue > 100) {
-            markerValue = 100;
             resultMarker.classList.add('pulse');
         } else {
             resultMarker.classList.remove('pulse');
@@ -178,7 +185,7 @@ class ImcCalculator extends Core {
         }
 
         // Highlight progress bar
-        const progressBarArr = resultWrapper.querySelectorAll('[data-tpl="imc-calculator-graph"]');
+        const progressBarArr = this._calculatorResultEl.querySelectorAll('[data-tpl="imc-calculator-graph"]');
 
         progressBarArr.forEach(progressBar => {
 
