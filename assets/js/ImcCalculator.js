@@ -170,20 +170,27 @@ class ImcCalculator extends Core {
         resultMarker.style.left = markerValue + '%';
 
         // Handle the colors
-        if (markerValue > 75 && markerValue <= 100) {
-            resultMarker.classList.remove('text-success', 'text-warning', 'text-primary');
-            resultMarker.classList.add('text-danger');
-        } else if (markerValue > 50 && markerValue <= 75) {
-            resultMarker.classList.remove('text-success', 'text-primary', 'text-danger');
-            resultMarker.classList.add('text-warning');
-        } else if (markerValue > 25 && markerValue <= 50) {
-            resultMarker.classList.remove('text-success', 'text-warning', 'text-danger');
-            resultMarker.classList.add('text-primary');
-        } else {
-            resultMarker.classList.remove('text-primary', 'text-warning', 'text-danger');
-            resultMarker.classList.add('text-success');
-        }
+        switch (true) {
+            case (markerValue > 75 && markerValue <= 100):
+                resultMarker.classList.remove('text-success', 'text-warning', 'text-primary');
+                resultMarker.classList.add('text-danger');
+                break;
 
+            case (markerValue > 50 && markerValue <= 75):
+                resultMarker.classList.remove('text-success', 'text-primary', 'text-danger');
+                resultMarker.classList.add('text-warning');
+                break;
+
+            case (markerValue > 25 && markerValue <= 50):
+                resultMarker.classList.remove('text-success', 'text-warning', 'text-danger');
+                resultMarker.classList.add('text-primary');
+                break;
+
+            default:
+                resultMarker.classList.remove('text-primary', 'text-warning', 'text-danger');
+                resultMarker.classList.add('text-success');
+                break;
+        }
         // Highlight progress bar
         const progressBarArr = this._calculatorResultEl.querySelectorAll('[data-tpl="imc-calculator-graph"]');
 
