@@ -1,14 +1,14 @@
+import { Core } from './Core.js';
+
 /**
- * Catalog
+ * IMC Calculator
  *
- * Displays the products catalog, allowing the user to
- * search and filter results, to locate products based
- * on their name, reference and catalogation.
+ * Allow the user to know IMC result of the calculation.
  *
  * @author Pedro Jesus <pedrotiagojesus1995@gmail.com>
  * @since 10-02-2023 First time this was introduced.
  */
-class ImcCalculator {
+class ImcCalculator extends Core {
 
     /**
      * Holds a reference to the DOM element object.
