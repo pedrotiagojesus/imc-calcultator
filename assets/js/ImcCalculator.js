@@ -58,6 +58,8 @@ class ImcCalculator extends Core {
      */
     constructor(id = '', name = '') {
 
+        super(id, name);
+
         // cache elements
         this._el = document.getElementById(id);
 
