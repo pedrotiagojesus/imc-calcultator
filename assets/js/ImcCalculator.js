@@ -112,7 +112,7 @@ class ImcCalculator extends Core {
 
             const imcValue = scope.calculateImc();
 
-            scope._calculatorResultEl = this._el.querySelector('[data-tpl="imc-calculator-result"]');
+            scope._calculatorResultEl = scope._el.querySelector('[data-tpl="imc-calculator-result"]');
 
             scope.result(imcValue);
 
