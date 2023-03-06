@@ -64,17 +64,19 @@ class ImcCalculator extends Core {
         this._el = document.getElementById(id);
 
         if (this._el === undefined || this._el === null) {
-            console.info('Class ' + name + ' not loaded!');
+            this.logInfo('Class ' + name + ' not loaded!');
             return;
         }
 
-        console.info('Loading ' + name + '...')
+        this.logInfo('Loading ' + name + '...');
 
         this._formEl = this._el.querySelector('form');
         this._formSubmitEl = this._formEl.querySelector('button[type="submit"]');
 
         // bind events
         this.onSubmit();
+
+        this.logInfo(name + ' loaded ...');
 
     }
 
